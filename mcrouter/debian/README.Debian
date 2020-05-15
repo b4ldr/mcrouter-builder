@@ -1,0 +1,6 @@
+mcrouter for Debian
+------------------
+
+The debian version of mcrouter is statically linked to fbthrift, fizz, wangle and folly, given all of those libraries don't have a stable ABI at the moment, similarly to what is done for HHVM.
+
+ -- Giuseppe Lavagetto <glavagetto@wikimedia.org>  Fri, 06 May 2016 12:08:32 +0200

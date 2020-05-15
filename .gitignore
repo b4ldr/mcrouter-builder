@@ -1,0 +1,10 @@
+mcrouter*.deb
+mcrouter*.dsc
+mcrouter*.tar.gz
+mcrouter*.buildinfo
+mcrouter*.changes
+mcrouter/bin
+mcrouter/debian/mcrouter/
+*debhelper*
+mcrouter/debian/mcrouter.substvars
+mcrouter/debian/files

@@ -1,0 +1,22 @@
+Source: mcrouter
+Section: net
+Priority: optional
+Maintainer: Giuseppe Lavagetto <glavagetto@wikimedia.org>
+Standards-Version: 4.5.0
+Homepage: https://github.com/facebook/mcrouter/wiki/
+#Vcs-Git: git://anonscm.debian.org/collab-maint/mcrouter.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/mcrouter.git
+
+Package: mcrouter
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, adduser, libjemalloc2,
+  libsodium23, libdouble-conversion1, libssl1.1, libevent-2.1-6,
+  libgflags2.2, libgoogle-glog0v5, libboost-context1.67.0,
+  libboost-filesystem1.67.0, libboost-program-options1.67.0,
+  libboost-system1.67.0, libboost-regex1.67.0, libboost-thread1.67.0,
+  libunwind8, libsnappy1v5
+Description: memcached protocol router
+ Mcrouter is a memcached protocol router for scaling memcached
+ (http://memcached.org/) deployments. It's a core component of cache
+ infrastructure at Facebook and Instagram where mcrouter handles almost
+ 5 billion requests per second at peak.

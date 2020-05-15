@@ -1,0 +1,14 @@
+[Unit]
+Description=Mcrouter memcached router
+After=network.target
+
+[Service]
+Environment=CONFIG_FILE=file:/etc/mcrouter/config.json
+Environment=ADDITIONAL_ARGS="--send-invalid-route-to-default --file-observer-poll-period-ms=1000 --file-observer-sleep-before-update-ms=100"
+Environment=RUN_AS_USER=mcrouter
+Environment=PORT=11211
+EnvironmentFile=-/etc/default/mcrouter
+ExecStart=/usr/bin/mcrouter --debug-fifo-root /var/lib/mcrouter/fifos --stats-root /var/lib/mcrouter/stats -p $PORT --config $CONFIG_FILE $ADDITIONAL_ARGS
+
+[Install]
+WantedBy=multi-user.target

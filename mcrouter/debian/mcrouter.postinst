@@ -1,0 +1,31 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure|reconfigure)
+        adduser \
+            --system \
+            --quiet \
+            --home /nonexistent \
+            --no-create-home \
+            --group \
+            mcrouter
+        chown mcrouter:mcrouter /var/lib/mcrouter
+        chmod 0750 /var/lib/mcrouter
+        chown mcrouter:mcrouter /var/spool/mcrouter
+        chmod 0750 /var/spool/mcrouter
+    ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+        exit 0
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0

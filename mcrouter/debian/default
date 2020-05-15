@@ -1,0 +1,15 @@
+# Defaults file for mcrouter
+# User to run as (default: mcrouter)
+# RUN_AS_USER=""
+#
+# Port to listen to (default: 11211)
+# PORT=""
+#
+# Config file (default: /etc/mcrouter/config.json)
+# CONFIG_FILE=""
+#
+# Additional options, see mcrouter --help
+# Default: --send-invalid-route-to-default --file-observer-poll-period-ms=1000 --file-observer-sleep-before-update-ms=100
+# ADDITIONAL_ARGS=""
+#
+
